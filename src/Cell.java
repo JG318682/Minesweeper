@@ -9,7 +9,7 @@ public class Cell  implements ActionListener{
     private int value;
     private int id;
     private boolean notChecked;
- 
+
     public Cell(Board board){
         button = new JButton();
         button.addActionListener(this);
