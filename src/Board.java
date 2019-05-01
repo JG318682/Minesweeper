@@ -40,7 +40,7 @@ public class Board {
         }
     }
 
-    /*Choose rendom places for mines*/
+    /*Chooses random places for mines*/
     public ArrayList<Integer> generateMinesLocation(int q) {
         ArrayList<Integer> loc = new ArrayList<Integer>();
         int random;
@@ -54,8 +54,7 @@ public class Board {
         return loc;
     }
 
-    // MOST IMPORTANT PART/////////////////////////////////////////////////////
-    /*This method count number of mines around particular cell and set its value*/
+    /*This method counts number of mines around particular cells and set their values*/
     public void setCellValues() {
         for (int i = 0; i < side; i++) {
             for (int j = 0; j < side; j++) {
@@ -73,8 +72,8 @@ public class Board {
         }
     }
 
-    /*This method starts chain reaction. When user click on particular cell, if cell is empty (value = 0) this
-    method look for other empty cells next to activated one. If finds one, it call checkCell and in effect,
+    /*This method starts chain reaction. When the user clicks on a particular cell, if the cell is empty (value = 0) this
+    method looks for another empty cell next to an activated one. If it finds one, it will call checkCell and in effect,
     start next scan on its closest area.
      */
     public void scanForEmptyCells() {
@@ -94,7 +93,6 @@ public class Board {
         }
     }
 
-    //////////////////////////////////////////////////////////////////////////////////
     public int getID() {
         int id = cellID;
         cellID++;
@@ -105,7 +103,6 @@ public class Board {
         for (Cell[] a : cells) {
             for (Cell b : a) {
                 if (b.getId() == id) return b;
-
             }
         }
         return null;
