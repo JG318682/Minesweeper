@@ -17,6 +17,7 @@ public class Cell  implements ActionListener{
         button.setMargin(new Insets(0,0,0,0));
         this.board = board;
         notChecked = true;
+        button.setBackground(Color.BLACK);
     }
 
     public JButton getButton() {
@@ -41,8 +42,8 @@ public class Cell  implements ActionListener{
 
     public void displayValue(){
         if(value==-1){
-            button.setText("\u2600");
-            button.setBackground(Color.RED);
+            button.setText("\u26A0");
+            button.setBackground(Color.GREEN);
         }else if(value!=0){
             button.setText(String.valueOf(value));
         }

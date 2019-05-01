@@ -7,6 +7,7 @@ public class Board {
     private int cellID = 0;
     private int side = 8;
     private int limit = side - 2;
+    private int p3;
 
     public void setBoard() {
         JFrame frame = new JFrame();
@@ -34,7 +35,7 @@ public class Board {
     }
 
     public void plantMines() {
-        ArrayList<Integer> loc = generateMinesLocation(10);
+        ArrayList<Integer> loc = generateMinesLocation(12);
         for (int i : loc) {
             getCell(i).setValue(-1);
         }
