@@ -1,7 +1,10 @@
+import javafx.css.Size;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Color;
 
 public class Cell  implements ActionListener{
     private JButton button;
@@ -9,6 +12,7 @@ public class Cell  implements ActionListener{
     private int value;
     private int id;
     private boolean notChecked;
+
 
     public Cell(Board board){
         button = new JButton();
@@ -43,6 +47,7 @@ public class Cell  implements ActionListener{
     public void displayValue(){
         if(value==-1){
             button.setText("\u26A0");
+            button.setForeground(Color.RED);
             button.setBackground(Color.GREEN);
         }else if(value!=0){
             button.setText(String.valueOf(value));

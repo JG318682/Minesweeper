@@ -59,14 +59,24 @@ public class Board {
         for (int i = 0; i < side; i++) {
             for (int j = 0; j < side; j++) {
                 if (cells[i][j].getValue() != -1) {
-                    if (j >= 1 && cells[i][j - 1].getValue() == -1) cells[i][j].incrementValue();
-                    if (j <= limit && cells[i][j + 1].getValue() == -1) cells[i][j].incrementValue();
-                    if (i >= 1 && cells[i - 1][j].getValue() == -1) cells[i][j].incrementValue();
-                    if (i <= limit && cells[i + 1][j].getValue() == -1) cells[i][j].incrementValue();
-                    if (i >= 1 && j >= 1 && cells[i - 1][j - 1].getValue() == -1) cells[i][j].incrementValue();
-                    if (i <= limit && j <= limit && cells[i + 1][j + 1].getValue() == -1) cells[i][j].incrementValue();
-                    if (i >= 1 && j <= limit && cells[i - 1][j + 1].getValue() == -1) cells[i][j].incrementValue();
-                    if (i <= limit && j >= 1 && cells[i + 1][j - 1].getValue() == -1) cells[i][j].incrementValue();
+                    if (j >= 1 && cells[i][j - 1].getValue() == -1)
+                        cells[i][j].incrementValue();
+
+                    if (j <= limit && cells[i][j + 1].getValue() == -1)
+                        cells[i][j].incrementValue();
+                    if (i >= 1 && cells[i - 1][j].getValue() == -1)
+                        cells[i][j].incrementValue();
+                    if (i <= limit && cells[i + 1][j].getValue() == -1)
+                        cells[i][j].incrementValue();
+                    if (i >= 1 && j >= 1 && cells[i - 1][j - 1].getValue() == -1)
+                        cells[i][j].incrementValue();
+                    if (i <= limit && j <= limit && cells[i + 1][j + 1].getValue() == -1)
+                        cells[i][j].incrementValue();
+                    if (i >= 1 && j <= limit && cells[i - 1][j + 1].getValue() == -1)
+                        cells[i][j].incrementValue();
+                    if (i <= limit && j >= 1 && cells[i + 1][j - 1].getValue() == -1)
+                        cells[i][j].incrementValue();
+
                 }
             }
         }
