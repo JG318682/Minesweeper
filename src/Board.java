@@ -7,7 +7,6 @@ public class Board {
     private int cellID = 0;
     private int side = 8;
     private int limit = side - 2;
-    private int p3;
 
     public void setBoard() {
         JFrame frame = new JFrame();
@@ -55,7 +54,7 @@ public class Board {
         return loc;
     }
 
-    /*This method counts number of mines around particular cells and set their values*/
+    /*This method counts number of mines around particular cells and sets their values*/
     public void setCellValues() {
         for (int i = 0; i < side; i++) {
             for (int j = 0; j < side; j++) {
@@ -73,7 +72,7 @@ public class Board {
         }
     }
 
-    /*This method starts chain reaction. When the user clicks on a particular cell, if the cell is empty (value = 0) this
+    /*This method starts a chain reaction. When the user clicks on a particular cell, if the cell is empty (value = 0) this
     method looks for another empty cell next to an activated one. If it finds one, it will call checkCell and in effect,
     start next scan on its closest area.
      */
