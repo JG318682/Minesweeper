@@ -45,16 +45,17 @@ public class Cell  implements ActionListener{
     public void displayValue(){
         if(value==-1){
             button.setText("\u26A0");
-            button.setForeground(Color.RED);
-            button.setBackground(Color.GREEN);
+            button.setBackground(Color.RED);
         }else if(value!=0){
             button.setText(String.valueOf(value));
+            button.setBackground(Color.BLUE);
         }
     }
 
     public void checkCell(){
         button.setEnabled(false);
         displayValue();
+        button.setBackground(Color.BLUE);
         notChecked = false;
         if(value == 0) board.scanForEmptyCells();
         if(value == -1) board.fail();
@@ -70,11 +71,12 @@ public class Cell  implements ActionListener{
 
     public boolean isEmpty(){
         return isNotChecked() && value==0;
-    }
+        }
 
     public void reveal(){
         displayValue();
         button.setEnabled(false);
+
     }
 
     @Override
@@ -83,4 +85,5 @@ public class Cell  implements ActionListener{
     }
 
 }
+
 
