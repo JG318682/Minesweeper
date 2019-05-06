@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Color;
 
 public class Cell  implements ActionListener{
     private JButton button;
@@ -10,6 +11,7 @@ public class Cell  implements ActionListener{
     private int id;
     private boolean notChecked;
 
+
     public Cell(Board board){
         button = new JButton();
         button.addActionListener(this);
@@ -17,6 +19,7 @@ public class Cell  implements ActionListener{
         button.setMargin(new Insets(0,0,0,0));
         this.board = board;
         notChecked = true;
+        button.setBackground(Color.BLACK);
     }
 
     public JButton getButton() {
@@ -41,16 +44,18 @@ public class Cell  implements ActionListener{
 
     public void displayValue(){
         if(value==-1){
-            button.setText("\u2600");
+            button.setText("\u26A0");
             button.setBackground(Color.RED);
         }else if(value!=0){
             button.setText(String.valueOf(value));
+            button.setBackground(Color.BLUE);
         }
     }
 
     public void checkCell(){
         button.setEnabled(false);
         displayValue();
+        button.setBackground(Color.BLUE);
         notChecked = false;
         if(value == 0) board.scanForEmptyCells();
         if(value == -1) board.fail();
@@ -66,11 +71,12 @@ public class Cell  implements ActionListener{
 
     public boolean isEmpty(){
         return isNotChecked() && value==0;
-    }
+        }
 
     public void reveal(){
         displayValue();
         button.setEnabled(false);
+
     }
 
     @Override
@@ -79,4 +85,5 @@ public class Cell  implements ActionListener{
     }
 
 }
+
 
