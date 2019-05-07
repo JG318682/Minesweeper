@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+import java.awt.event.*;
 
 public class Board {
     private Cell[][] cells;
@@ -123,6 +125,19 @@ public class Board {
             for (Cell b : a) {
                 b.reveal();
             }
+        }
+        Cell.score += 1;
+        int n = JOptionPane.YES_NO_OPTION;
+        int f = JOptionPane.showConfirmDialog(null, "Your Score Was " + Cell.score + " Points! \n" +
+                "Would You Like To Play Again? ","Restart Box",  n);
+        Cell.score = Cell.setScore(0);
+        if(f == 0)
+        {
+            Start.main(null);
+        }
+        else
+        {
+            System.exit(0);
         }
     }
 }

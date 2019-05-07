@@ -7,15 +7,16 @@ import java.awt.Color;
 public class Cell  implements ActionListener{
     private JButton button;
     private Board board;
-    private int value;
+    int value = 0;
     private int id;
     private boolean notChecked;
+    public static int score = 0;
 
 
     public Cell(Board board){
         button = new JButton();
         button.addActionListener(this);
-        button.setPreferredSize(new Dimension(20,20));
+        button.setPreferredSize(new Dimension(125,80));
         button.setMargin(new Insets(0,0,0,0));
         this.board = board;
         notChecked = true;
@@ -41,6 +42,17 @@ public class Cell  implements ActionListener{
     public void setValue(int value) {
         this.value = value;
     }
+
+    public static int setScore(int s){
+        s = score;
+        s = 0;
+        return 0;
+    }
+
+    public int getScore(){
+        return score;
+    }
+
 
     public void displayValue(){
         if(value==-1){
@@ -81,6 +93,7 @@ public class Cell  implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        score = value + score;
         checkCell();
     }
 
