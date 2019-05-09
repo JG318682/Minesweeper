@@ -15,7 +15,7 @@ public class Score
 
 //      Returns a line of text from the input file
 
-    public static String readString() {
+    public static String readScore() {
         if (in == null) {
             try {
                 in = new Scanner(new File(DATA_FILE));

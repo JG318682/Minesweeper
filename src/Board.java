@@ -129,7 +129,7 @@ public class Board {
         Cell.score += 1;
 
         Score.writeScore(Cell.score);
-        Score.readString();
+        Score.readScore();
         int n = JOptionPane.YES_NO_OPTION;
         int f = JOptionPane.showConfirmDialog(null, "Your Score Was " + Cell.score + " Points! \n" +
                 "Would You Like To Play Again? ","Restart Box",  n);
