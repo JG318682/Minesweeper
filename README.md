@@ -8,7 +8,7 @@ The latest version of this project is v1.0
 When you play, you need to first open the game. Then you will start by selecting a random tile, and then contuine until you have finished the game or you select a tile with a bomb.
 
 # UML
-
+Link to our UML
 
 # YouTube Link
 Attached is a link of video of the game Minesweeper running
