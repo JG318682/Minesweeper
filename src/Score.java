@@ -5,8 +5,6 @@ import java.io.BufferedWriter;
 
 public class Score
 {
-    private int score = Cell.score;
-
     private static final String DATA_FILE = "Score.txt";
 
     private static Scanner in;

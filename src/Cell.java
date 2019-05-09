@@ -49,11 +49,6 @@ public class Cell  implements ActionListener{
         return 0;
     }
 
-    public int getScore(){
-        return score;
-    }
-
-
     public void displayValue(){
         if(value==-1){
             button.setText("\u26A0");
