@@ -127,16 +127,22 @@ public class Board {
             }
         }
         Cell.score += 1;
+
+        Score.writeScore(Cell.score);
+        Score.readString();
         int n = JOptionPane.YES_NO_OPTION;
         int f = JOptionPane.showConfirmDialog(null, "Your Score Was " + Cell.score + " Points! \n" +
                 "Would You Like To Play Again? ","Restart Box",  n);
+
         Cell.score = Cell.setScore(0);
         if(f == 0)
         {
+
             Start.main(null);
         }
         else
         {
+            Score.saveAndClose();
             System.exit(0);
         }
     }

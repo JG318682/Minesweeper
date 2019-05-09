@@ -7,7 +7,7 @@ import java.awt.Color;
 public class Cell  implements ActionListener{
     private JButton button;
     private Board board;
-    int value = 0;
+    private int value = 0;
     private int id;
     private boolean notChecked;
     public static int score = 0;
