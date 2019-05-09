@@ -10,9 +10,6 @@ When you play, you need to first open the game. Then you will start by selecting
 # UML
 Link to our [UML](https://www.draw.io/?state=%7B%22ids%22:%5B%221W05VBvDmQkMNgnbgVrgwsuE9CvxpxO7m%22%5D,%22action%22:%22open%22,%22userId%22:%22104511330796398488567%22%7D#G1W05VBvDmQkMNgnbgVrgwsuE9CvxpxO7m)
 
-# YouTube Link
-Attached is a link of video of the game Minesweeper running
-
 # Built With
 This game was built with IntelliJ 2017
 
